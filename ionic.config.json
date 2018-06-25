@@ -1,0 +1,8 @@
+{
+  "name": "congressoCNMP",
+  "app_id": "c1a22c49",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
