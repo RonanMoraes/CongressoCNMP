@@ -14,9 +14,9 @@ export class HomePage {
 
   menuItens= [
     {
-      title1: "Título",
+      title1: "Palestras Magnas",
       image1: "../../assets/imgs/palestra.png",
-      title2: "Título",
+      title2: "Palestra por Dia",
       image2: "../../assets/imgs/palestraPorDia.png",
       title3: "Título",
       image3: "../../assets/imgs/palestraSalas.png"
