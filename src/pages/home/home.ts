@@ -1,9 +1,9 @@
 
 import { DaoAppProvider } from '../../providers/dao-app/dao-app';
 
-
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+
 
 @Component({
   selector: 'page-home',
@@ -11,6 +11,25 @@ import { NavController } from 'ionic-angular';
  // providers: [DaoAppProvider] 
 })
 export class HomePage {
+
+  menuItens= [
+    {
+      title1: "Título",
+      image1: "../../assets/imgs/palestra.png",
+      title2: "Título",
+      image2: "../../assets/imgs/palestraPorDia.png",
+      title3: "Título",
+      image3: "../../assets/imgs/palestraSalas.png"
+    },
+    {
+      title1: "Título",
+      image1: "../../assets/imgs/informacoesImportantes.png",
+      title2: "Título",
+      image2: "../../assets/imgs/palestraPorDia.png",
+      title3: "Título",
+      image3: "../../assets/imgs/palestraSalas.png"    
+    }
+  ];
 
   splash = false;
   wasNotShow =true;

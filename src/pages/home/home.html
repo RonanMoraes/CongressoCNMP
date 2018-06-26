@@ -18,13 +18,32 @@
 </ion-header>
 
 <ion-content padding  >
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-  <p>Novo Texto</p>
+ 
+  <ion-grid>
+    <ion-row *ngFor="let itens of menuItens">
+      <ion-col >
+        <ion-card class="itemMenu">
+          <img src="{{itens.image1}}" >
+         <p>{{itens.title1}}</p>
+        </ion-card> 
+      
+      </ion-col>
+      <ion-col  >
+        <ion-card class="itemMenu">
+          <img src="{{itens.image2}}">
+          <p>{{itens.title2}}</p>
+        </ion-card> 
+      </ion-col>
+      <ion-col  >
+          <ion-card class="itemMenu">
+            <img src="{{itens.image3}}">
+            <p>{{itens.title3}}</p>
+          </ion-card> 
+        </ion-col>
   
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+    </ion-row>
+  </ion-grid>
+
+ 
 </ion-content>
