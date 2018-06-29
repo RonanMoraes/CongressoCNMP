@@ -22,7 +22,7 @@
   <ion-grid>
     <ion-row *ngFor="let itens of menuItens">
       <ion-col >
-        <ion-card class="itemMenu">
+        <ion-card #button1 (press)="itemFocus(itens)" (click)="changeMenssage(itens.page1)" class="itemMenu">
           <img src="{{itens.image1}}" >
            {{itens.title1}}
         </ion-card> 
@@ -40,9 +40,10 @@
             <p>{{itens.title3}}</p>
           </ion-card> 
         </ion-col>
-  
+
 
     </ion-row>
+    
   </ion-grid>
 
  

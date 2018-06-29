@@ -1,7 +1,7 @@
 
 import { DaoAppProvider } from '../../providers/dao-app/dao-app';
 
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 
@@ -12,22 +12,32 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
+  @ViewChild('button1') bt : ElementRef;
+
+  menssagemClick = "nada foi clicado ainda";
+
   menuItens= [
     {
       title1: "Palestras Magnas",
       image1: "../../assets/imgs/palestra.png",
-      title2: "Palestra por Dia",
+      page1: "PalestraMagnaPage",
+      title2: "Palestra por Dia",      
       image2: "../../assets/imgs/palestraPorDia.png",
+      page2: "ListPage",
       title3: "Título",
-      image3: "../../assets/imgs/palestraSalas.png"
+      image3: "../../assets/imgs/palestraSalas.png",
+      page3: "PalestraMagnaPage"
     },
     {
       title1: "Título",
       image1: "../../assets/imgs/informacoesImportantes.png",
+      page1: "ListPage",
       title2: "Título",
       image2: "../../assets/imgs/palestraPorDia.png",
+      page2: "ListPage",
       title3: "Título",
-      image3: "../../assets/imgs/palestraSalas.png"    
+      image3: "../../assets/imgs/palestraSalas.png",
+      page3: "ListPage"    
     }
   ];
 
@@ -49,8 +59,22 @@ export class HomePage {
   ionViewDidEnter(){
    // this.wasNotShow = false;
   }
+  changeMenssage(itemClick){
+      //this.menssagemClick = "foi clicado "+itemClick;
+    
+      this.navCtrl.push(itemClick);
+      this.bt.nativeElement.style.background = '#ffffff';
 
+  }
+
+  itemFocus(item) {
+    
    
+      this.bt.nativeElement.style.background = ' #e2e2e2'; 
+
+
+
+  } 
     
 
 }
