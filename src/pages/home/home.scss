@@ -94,4 +94,18 @@ page-home {
             opacity:1;
         }
     }
+    .text-on-bottom > .button-inner {
+        flex-flow: column;
+        
+        font-size: 1rem;
+
+        
+    }
+    .button {
+       
+        height: 100%;
+       
+    }
+   
+    
 }

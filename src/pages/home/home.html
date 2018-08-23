@@ -1,48 +1,51 @@
-<div id="custom-overlay" *ngIf="wasNotShow" [style.display]="splash ? 'flex': 'none'" >
-    <div class="flb">
-         <div class="Aligner-item Aligner-item--top"></div>
-         <img src="./assets/imgs/splash.png">
-         <div class="Aligner-item Aligner-item--bottom"></div>
-    </div>
+<div id="custom-overlay" *ngIf="wasNotShow" [style.display]="splash ? 'flex': 'none'">
+  <div class="flb">
+    <div class="Aligner-item Aligner-item--top"></div>
+    <img src="./assets/imgs/splash.png">
+    <div class="Aligner-item Aligner-item--bottom"></div>
+  </div>
 </div>
+
 
 
 <ion-header>
   <!--<div ><img src="../assets/imgs/topo.png" class="logo-size" alt="logo"></div>-->
-  <ion-navbar class="background" >
+  <ion-navbar class="background">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-   
+
   </ion-navbar>
 </ion-header>
 
-<ion-content padding  >
- 
+<ion-content padding>
+
   <ion-grid>
     <ion-row *ngFor="let itens of menuItens">
-      <ion-col >
-        <ion-card #button1 (press)="itemFocus(itens)" (click)="changeMenssage(itens.page1)" class="itemMenu">
-          <img src="{{itens.image1}}" >
-           {{itens.title1}}
-        </ion-card> 
-      
+      <ion-col col-4>
+        <button ion-button outline text-wrap  color="dark" class="text-on-bottom " (click)="changeMenssage(itens.page1)" >
+          <img src="{{itens.image1}}"> {{itens.title1}}
+        </button>
+
       </ion-col>
-      <ion-col  >
-        <ion-card class="itemMenu">
-          <img src="{{itens.image2}}">
-          <p>{{itens.title2}}</p>
-        </ion-card> 
+      <ion-col col-4 >
+        <button ion-button outline text-wrap color="dark" class="text-on-bottom " (click)="changeMenssage(itens.page2)">
+          
+            <img src="{{itens.image2}}">
+           
+            <span class="wrap-text">TEXT FOR YOUR BUTTON</span>
+       
+        </button>
       </ion-col>
-      <ion-col>
-          <ion-card class="itemMenu">
-            <img src="{{itens.image3}}">
-            <p>{{itens.title3}}</p>
-          </ion-card> 
-        </ion-col>
+      <ion-col col-4>
+        <button ion-button outline text-wrap color="dark" class="text-on-bottom " (click)="changeMenssage(itens.page1)">
+          <img src="{{itens.image3}}">
+          <p>{{itens.title3}}</p>
+        </button>
+      </ion-col>
     </ion-row>
-    
+
   </ion-grid>
 
- 
+
 </ion-content>

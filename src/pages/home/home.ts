@@ -1,7 +1,7 @@
 
 import { DaoAppProvider } from '../../providers/dao-app/dao-app';
 
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component} from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 
@@ -12,37 +12,48 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  @ViewChild('button1') bt : ElementRef;
+ 
 
   menssagemClick = "nada foi clicado ainda";
 
   menuItens= [
     {
       title1: "Palestras Magnas",
-      image1: "../../assets/imgs/palestra.png",
+      image1: "../../assets/imgs/PalestraMagna.png",
       page1: "PalestraMagnaPage",
-      title2: "Palestra por Dia",      
-      image2: "../../assets/imgs/palestraPorDia.png",
-      page2: "ListPage",
-      title3: "Título",
-      image3: "../../assets/imgs/palestraSalas.png",
+      title2: "Programação por Sala",      
+      image2: "../../assets/imgs/PalestraPorSala.png",
+      page2: "PalestraMagnaPage",
+      title3: "Programação por Dia",
+      image3: "../../assets/imgs/PalestraPorDia.png",
       page3: "PalestraMagnaPage"
     },
     {
-      title1: "Título",
+      title1: "Informações Importante",
       image1: "../../assets/imgs/informacoesImportantes.png",
-      page1: "ListPage",
-      title2: "Título",
-      image2: "../../assets/imgs/palestraPorDia.png",
-      page2: "ListPage",
-      title3: "Título",
-      image3: "../../assets/imgs/palestraSalas.png",
-      page3: "ListPage"    
+      page1: "PalestraMagnaPage",
+      title2: "Carta do Presidente",
+      image2: "../../assets/imgs/CartaPresidente.png",
+      page2: "PalestraMagnaPage",
+      title3: "Localização",
+      image3: "../../assets/imgs/Localização.png",
+      page3: "PalestraMagnaPage"    
+    },
+    {
+      title1: "Redes Sociais",
+      image1: "../../assets/imgs/RedesSociais.png",
+      page1: "PalestraMagnaPage",
+      title2: "Contato",
+      image2: "../../assets/imgs/Contato.png",
+      page2: "PalestraMagnaPage",
+      title3: "Avaliação do Congresso",
+      image3: "../../assets/imgs/Avaliação.png",
+      page3: "PalestraMagnaPage"    
     }
   ];
 
   splash = false;
-  wasNotShow =true;
+  wasNotShow =true; // mudar para true para spalshscreen aparecer
   //secondPage = SecondPagePage;
 
   constructor(public navCtrl: NavController, public daoApp: DaoAppProvider) {
@@ -63,18 +74,11 @@ export class HomePage {
       //this.menssagemClick = "foi clicado "+itemClick;
     
       this.navCtrl.push(itemClick);
-      this.bt.nativeElement.style.background = '#ffffff';
+    
 
   }
 
-  itemFocus(item) {
-    
-   
-      this.bt.nativeElement.style.background = ' #e2e2e2'; 
-
-
-
-  } 
+ 
     
 
 }
